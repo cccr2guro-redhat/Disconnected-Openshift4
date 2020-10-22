@@ -1,0 +1,40 @@
+apiVersion: v1
+baseDomain: cccr.local
+compute:
+- hyperthreading: Enabled
+  name: worker
+  replicas: 0
+controlPlane:
+  hyperthreading: Enabled
+  name: master
+  replicas: 3
+metadata:
+  name: redhat2
+networking:
+  clusterNetworks:
+  - cidr: 10.1.0.0/16
+    hostPrefix: 24
+  networkType: OpenShiftSDN
+  serviceNetwork:
+  - 172.30.0.0/16
+platform:
+  none: {}
+pullSecret: '{"auths":{"bastion.redhat2.cccr.local:5000": {"auth": "ZGV2b3BzOmRrYWdoMS4=","email": "______@gmail.com"}}}'
+sshKey: 'ssh-rsa xxxxxxxxxxxxxx root@bastion.redhat2.cccr.local'
+additionalTrustBundle: |
+
+  -----BEGIN CERTIFICATE-----
+
+~~~ 
+~~~
+~~~
+
+  -----END CERTIFICATE-----
+
+imageContentSources:
+  - mirrors:
+    - bastion.redhat2.cccr.local:5000/ocp4/openshift4
+    source: quay.io/openshift-release-dev/ocp-release
+  - mirrors:
+    - bastion.redhat2.cccr.local:5000/ocp4/openshift4
+    source: quay.io/openshift-release-dev/ocp-v4.0-art-dev
