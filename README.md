@@ -1,11 +1,11 @@
 # Disconnect Openshift Container Platform 구축 및 CI/CD Pipeline
-
+<br></br>
 ## 프로젝트 목표
 
 **1. PaaS 클라우드 구축**
 
 일반적으로 고객사들은 자사의 보안을 위해 외부와 인터넷이 단절된, 즉 disconnected 환경에서 클라우드 Platform을 구축한다. 본 프로젝트를 통해 이러한
- Disconnected 환경에서 Openshift 기반의 PaaS 클라우드 아키텍쳐를 수립하고 환경을 구축한다. PaaS 클라우드를 구축하기 위한 사전 준비 사항 및 고려 사항을 파악하고 일반적인 아키텍처에 대해 이해한다. 
+ Disconnected 환경에서 Openshift 기반의 PaaS 클라우드 아키텍쳐를 수립하고 환경을 구축한다. PaaS 클라우드를 구축하기 위한 사전 준비 사항 및 고려 사항을 파악하고 전체적인 아키텍처에 대해 이해한다. 
 
 **2. DevSecOps Pipeline 구성**
 
@@ -38,12 +38,20 @@
 - 5 Core, RAM 16 GB, SSD 512 GB
 - KVM 
 <br>
+<<<<<<< HEAD
 
 **2.네트워크 구성**
 - Host <—> 다른 Host의 VM : Bridge 통신
 - Host <—> 본인 Guest VM  : Host-Only 통신
 
+=======
+>>>>>>> 924621e07806f82514568961ea7a7400c09dc2a2
 
+**2.네트워크 구성**
+- Host <—> 다른 Host의 VM : Bridge 통신
+- Host <—> 본인 Guest VM  : Host-Only 통신
+
+<br></br>
 # Architecture
 
 **1. 노드별 Resource, IP 구성**
@@ -59,7 +67,7 @@
     <tr>
         <th>구분</th>
         <th>서버명</th>
-        <th>OS 구분</th>
+        <th> OS 구분 </th>
         <th>Hostname<br>(Domain).redhat2.cccr.local</th>
         <th>IP</th>
         <th>vcpu<br>(core)</th>
@@ -70,15 +78,15 @@
 </thead>
 <tbody>
     <tr>
-        <td rowspan=7>컨테이너 <br>관리서버</td>
+        <td rowspan=7>컨테이너<br>관리노드</td>
         <td>BootStrap</td>
         <td>RHCOS 4.4</td>
         <td align="center">bootstrap</td>
         <td>10.10.10.10</td>
         <td align="center">4</td>
         <td align="center">16</td>
-        <td>120</td>
-        <td>100</td>
+        <td align="center">120</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Master #1</td>
@@ -87,8 +95,8 @@
         <td>10.10.10.11</td>
         <td align="center">4</td>
         <td align="center">8</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Master #2</td>
@@ -97,8 +105,8 @@
         <td>10.10.10.12</td>
         <td align="center">4</td>
         <td align="center">8</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Master #3</td>
@@ -107,8 +115,8 @@
         <td>10.10.10.13</td>
         <td align="center">4</td>
         <td align="center">8</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Infra #1 </td>
@@ -127,8 +135,8 @@
         <td>10.10.10.15</td>
         <td align="center">4</td>
         <td align="center">8</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Router</td>
@@ -137,8 +145,8 @@
         <td>10.10.10.16</td>
         <td align="center">2</td>
         <td align="center">3</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>주변시스템</td>
@@ -148,8 +156,8 @@
         <td>10.10.10.17</td>
         <td align="center">4</td>
         <td align="center">8</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td rowspan=2>컨테이너 <br> 업무서버 </td>
@@ -159,8 +167,8 @@
         <td>10.10.10.18</td>
         <td align="center">2</td>
         <td align="center">4</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Service #2</td>
@@ -169,8 +177,8 @@
         <td>10.10.10.19</td>
         <td align="center">2</td>
         <td align="center">4</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
 
 </tbody>
