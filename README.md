@@ -38,14 +38,6 @@
 - 5 Core, RAM 16 GB, SSD 512 GB
 - KVM 
 <br>
-<<<<<<< HEAD
-
-**2.네트워크 구성**
-- Host <—> 다른 Host의 VM : Bridge 통신
-- Host <—> 본인 Guest VM  : Host-Only 통신
-
-=======
->>>>>>> 924621e07806f82514568961ea7a7400c09dc2a2
 
 **2.네트워크 구성**
 - Host <—> 다른 Host의 VM : Bridge 통신
