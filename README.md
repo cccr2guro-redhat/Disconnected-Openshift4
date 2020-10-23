@@ -59,7 +59,7 @@
     <tr>
         <th>구분</th>
         <th>서버명</th>
-        <th>OS 구분</th>
+        <th> OS 구분 </th>
         <th>Hostname<br>(Domain).redhat2.cccr.local</th>
         <th>IP</th>
         <th>vcpu<br>(core)</th>
@@ -70,15 +70,15 @@
 </thead>
 <tbody>
     <tr>
-        <td rowspan=7>컨테이너 <br>관리서버</td>
+        <td rowspan=7>컨테이너<br>관리노드</td>
         <td>BootStrap</td>
         <td>RHCOS 4.4</td>
         <td align="center">bootstrap</td>
         <td>10.10.10.10</td>
         <td align="center">4</td>
         <td align="center">16</td>
-        <td>120</td>
-        <td>100</td>
+        <td align="center">120</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Master #1</td>
@@ -87,8 +87,8 @@
         <td>10.10.10.11</td>
         <td align="center">4</td>
         <td align="center">8</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Master #2</td>
@@ -97,8 +97,8 @@
         <td>10.10.10.12</td>
         <td align="center">4</td>
         <td align="center">8</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Master #3</td>
@@ -107,8 +107,8 @@
         <td>10.10.10.13</td>
         <td align="center">4</td>
         <td align="center">8</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Infra #1 </td>
@@ -127,8 +127,8 @@
         <td>10.10.10.15</td>
         <td align="center">4</td>
         <td align="center">8</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Router</td>
@@ -137,8 +137,8 @@
         <td>10.10.10.16</td>
         <td align="center">2</td>
         <td align="center">3</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>주변시스템</td>
@@ -148,8 +148,8 @@
         <td>10.10.10.17</td>
         <td align="center">4</td>
         <td align="center">8</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td rowspan=2>컨테이너 <br> 업무서버 </td>
@@ -159,8 +159,8 @@
         <td>10.10.10.18</td>
         <td align="center">2</td>
         <td align="center">4</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Service #2</td>
@@ -169,8 +169,8 @@
         <td>10.10.10.19</td>
         <td align="center">2</td>
         <td align="center">4</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
 
 </tbody>
