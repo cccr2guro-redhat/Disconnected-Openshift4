@@ -26,32 +26,32 @@
 - 사용자 ID 권한 부여 및 Access 제어
 - 컨테이너 분리 및 네트워크 분리
 - 컨테이너 이미지 스캔
-
+]
 <br></br>
 ## 프로젝트 인프라 구성 환경
 
-<img src="/image/ProjectEnvironment.png" width="500" height="500">
-<br></br>
+<img src="/image/ProjectEnvironment.png" width="500" height="400">
+
+**1. 리소스 구성**
 - 노트북 4대, Hub 1대,  LAN Cable 4개
-    - 노트북 스펙
-        - Ubuntu 18.04
-        - 5 Core
-        - RAM 16 GB
-        - SSD 512 GB
-        - Hypervisior : KVM
-- 네트워크 통신 방법
-    - Host < — > 다른 Host의 VM : Bridge 통신
-    - Host < — > 본인 Guest VM : Host-Only 통신
+- Ubuntu 18.04 (RHEL 추천)
+- 5 Core, RAM 16 GB, SSD 512 GB
+- KVM 
+<br>
+
+**2.네트워크 구성**
+- Host <—> 다른 Host의 VM : Bridge 통신
+- Host <—> 본인 Guest VM  : Host-Only 통신
+
 
 # Architecture
 
-## 1. 각 노드별 Resource, IP Settings과 역할
+**1. 노드별 Resource, IP 구성**
 
 - Cluster Name : redhat2
 - Base Domain : cccr.local
 - Openshift Service network : 172.30.0.0/16
 - cluster network ( Pod ) : 10.1.0.0/16
-
 
 
 <table>
@@ -176,20 +176,21 @@
 </tbody>
 </table>
 
-- Bastion Node : Openshift 4 Container Platform 구축의 기반 역할
-    - DNS, HAProxy, Image Registry, Chrony, Yum Repository 서버 구축
-- Master Node : Openshift 4 Control Plane Node, 고가용성을 위한 3중화
-- Router Node : Application이 배포될 Service Node로 Routing Node
-- Infra Node : Logging, Monitoring 를 위한 Node
+**2. 노드별 역할**
+
+- Bastion Node : Openshift 4 Container Platform 구축의 기반이 되는 노드로서, DNS/ HAProxy/ Image Registry/ Chrony/ Yum Repository 을 포함
+- Master Node : Openshift 4 Control Plane Node, 고가용성을 위해 반드시 3중화 이상으로 구성 
+- Router Node : Application이 배포될 서비스 노드로 라우팅하는 노드
+- Infra Node : Logging, Monitoring, CI/CD 구성을 위한 노드
 - Service Node : 실질적인 Application이 배포되는 Node
 
-## 2. 논리적 Architecture
+**3. 논리적 Architecture**
 
 ![logical](./images/logical.png)
 
-## 3. 물리적 Architecture
+**4.. 물리적 Architecture**
 
-- Laptop 4대에 VM의 리소스 할당량을 고려하여 배치하였습니다.  한다. / 합니다.
-- Com #3의 경우 Bootstrap은 Master Node 설치 후 삭제해도 되므로 삭제한 후 Infra #2, Router Node를 올렸습니다.
+- 각 VM의 리소스 할당량을 고려하여 배치
+- Com #3의 경우 Bootstrap은 Master Node 설치 후 삭제가능하므로, 구축 완료 후 삭제하고 Infra #2, Router Node 배치 
 
 ![physical](./images/physical.png)
