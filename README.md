@@ -117,8 +117,8 @@
         <td>10.10.10.14</td>
         <td align="center">4</td>
         <td align="center">8</td>
-        <td>100</td>
-        <td>100</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
     </tr>
     <tr>
         <td>Infra #2</td>
@@ -152,7 +152,7 @@
         <td align="center">100</td>
     </tr>
     <tr>
-        <td rowspan=2>컨테이너 <br> 업무서버 </td>
+        <td rowspan=3>컨테이너<br>업무서버 </td>
         <td>Service #1</td>
         <td>RHCOS 4.4</td>
         <td align="center">service-1</td>
@@ -172,7 +172,16 @@
         <td align="center">100</td>
         <td align="center">100</td>
     </tr>
-
+    <tr>
+        <td>Quay</td>
+        <td>RHEL 7.8</td>
+        <td align="center">quay</td>
+        <td>10.10.10.21</td>
+        <td align="center">3</td>
+        <td align="center">8</td>
+        <td align="center">100</td>
+        <td align="center">100</td>
+    </tr>
 </tbody>
 </table>
 
