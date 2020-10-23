@@ -41,7 +41,7 @@
     - Host < — > 다른 Host의 VM : Bridge 통신
     - Host < — > 본인 Guest VM : Host-Only 통신
 
-<img src="/image/ProjectEnvironment.png" width="300" height="200">
+<img src="/image/ProjectEnvironment.png" width="500" height="500">
 
 # Architecture
 
