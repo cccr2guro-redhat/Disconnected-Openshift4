@@ -30,6 +30,8 @@
 <br></br>
 ## 프로젝트 인프라 구성 환경
 
+<img src="/image/ProjectEnvironment.png" width="500" height="500">
+<br></br>
 - 노트북 4대, Hub 1대,  LAN Cable 4개
     - 노트북 스펙
         - Ubuntu 18.04
@@ -40,8 +42,6 @@
 - 네트워크 통신 방법
     - Host < — > 다른 Host의 VM : Bridge 통신
     - Host < — > 본인 Guest VM : Host-Only 통신
-
-<img src="/image/ProjectEnvironment.png" width="500" height="500">
 
 # Architecture
 
