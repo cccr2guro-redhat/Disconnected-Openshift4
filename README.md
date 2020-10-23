@@ -75,8 +75,8 @@
         <td>RHCOS 4.4</td>
         <td align="center">bootstrap</td>
         <td>10.10.10.10</td>
-        <td>4</td>
-        <td>16</td>
+        <td align="center">4</td>
+        <td align="center">16</td>
         <td>120</td>
         <td>100</td>
     </tr>
@@ -85,8 +85,8 @@
         <td>RHCOS 4.4</td>
         <td align="center">master-1</td>
         <td>10.10.10.11</td>
-        <td>4</td>
-        <td>8</td>
+        <td align="center">4</td>
+        <td align="center">8</td>
         <td>100</td>
         <td>100</td>
     </tr>
@@ -95,8 +95,8 @@
         <td>RHCOS 4.4</td>
         <td align="center">master-2</td>
         <td>10.10.10.12</td>
-        <td>4</td>
-        <td>8</td>
+        <td align="center">4</td>
+        <td align="center">8</td>
         <td>100</td>
         <td>100</td>
     </tr>
@@ -105,8 +105,8 @@
         <td>RHCOS 4.4</td>
         <td align="center">master-3</td>
         <td>10.10.10.13</td>
-        <td>4</td>
-        <td>8</td>
+        <td align="center">4</td>
+        <td align="center">8</td>
         <td>100</td>
         <td>100</td>
     </tr>
@@ -115,8 +115,8 @@
         <td>RHCOS 4.4</td>
         <td align="center">infra-1</td>
         <td>10.10.10.14</td>
-        <td>4</td>
-        <td>8</td>
+        <td align="center">4</td>
+        <td align="center">8</td>
         <td>100</td>
         <td>100</td>
     </tr>
@@ -125,8 +125,8 @@
         <td>RHCOS 4.4</td>
         <td align="center">infra-2</td>
         <td>10.10.10.15</td>
-        <td>4</td>
-        <td>8</td>
+        <td align="center">4</td>
+        <td align="center">8</td>
         <td>100</td>
         <td>100</td>
     </tr>
@@ -135,8 +135,8 @@
         <td>RHCOS 4.4</td>
         <td align="center">router</td>
         <td>10.10.10.16</td>
-        <td>2</td>
-        <td>3</td>
+        <td align="center">2</td>
+        <td align="center">3</td>
         <td>100</td>
         <td>100</td>
     </tr>
@@ -146,8 +146,8 @@
         <td>RHCOS 4.4</td>
         <td align="center">bastion</td>
         <td>10.10.10.17</td>
-        <td>4</td>
-        <td>8</td>
+        <td align="center">4</td>
+        <td align="center">8</td>
         <td>100</td>
         <td>100</td>
     </tr>
@@ -157,8 +157,8 @@
         <td>RHCOS 4.4</td>
         <td align="center">service-1</td>
         <td>10.10.10.18</td>
-        <td>2</td>
-        <td>4</td>
+        <td align="center">2</td>
+        <td align="center">4</td>
         <td>100</td>
         <td>100</td>
     </tr>
@@ -167,8 +167,8 @@
         <td>RHCOS 4.4</td>
         <td align="center">service-2</td>
         <td>10.10.10.19</td>
-        <td>2</td>
-        <td>4</td>
+        <td align="center">2</td>
+        <td align="center">4</td>
         <td>100</td>
         <td>100</td>
     </tr>
