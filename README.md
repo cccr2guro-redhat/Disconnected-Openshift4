@@ -9,7 +9,7 @@
 
 **2. DevSecOps Pipeline 구성**
 
-환경 및 데이터 보안, CI/CD 프로세스 및 보안을 고려한 DevSecOps Pipeline을 구성하고 Jenkins, Gitlab, API, Quay 등을 연계하여 PaaS 클라우드 환경에서 빌드 및 배포의 자동화를 구성한다.  
+환경 및 데이터 보안, CI/CD 프로세스 및 보안을 고려한 DevSecOps Pipeline을 구성하고 Jenkins, Gitlab, Quay 등을 연계하여 PaaS 클라우드 환경에서 빌드 및 배포의 자동화를 구성한다.  
 <br></br>
 
 ## 주요 내용
@@ -22,18 +22,18 @@
 - 프라이빗 PaaS 클라우드 (Openshift 4) 아키텍쳐 설계 및 구축
 - Master, Infra, Router, App Node 설계와 구축
 
-**3. Git, Jenkins, Quay 등을 활용한 DevSecOps Pipeline 설계와 구축**
+**3. GitLab, Jenkins, Quay 등을 활용한 DevSecOps Pipeline 설계와 구축**
 - 사용자 ID 권한 부여 및 Access 제어
 - 컨테이너 분리 및 네트워크 분리
 - 컨테이너 이미지 스캔
-]
+
 <br></br>
 ## 프로젝트 인프라 구성 환경
 
-<img src="/image/ProjectEnvironment.png" width="500" height="400">
+
 
 **1. 리소스 구성**
-- 노트북 4대, Hub 1대,  LAN Cable 4개
+- 노트북 5대, Hub 1대,  LAN Cable 5개
 - Ubuntu 18.04 (RHEL 추천)
 - 5 Core, RAM 16 GB, SSD 512 GB
 - KVM 
@@ -46,7 +46,21 @@
 <br></br>
 # Architecture
 
-**1. 노드별 Resource, IP 구성**
+
+**1. 논리적 Architecture**
+
+<< 논리적 아키텍쳐 >>
+
+- QUAY는 페쇄망에서 구축할 수 있는 버전이 아직 나오지 않아 폐쇄망 외부에 구축하였음
+
+**2.. 물리적 Architecture**
+
+- 각 VM의 리소스 할당량을 고려하여 배치
+- Com #3의 경우 Bootstrap은 Master Node 설치 후 삭제가능하므로, 구축 완료 후 삭제하고 Infra #2, Router Node 배치
+
+<< 물리적 아키텍쳐 >>
+
+**3. 노드별 Resource, IP 구성**
 
 - Cluster Name : redhat2
 - Base Domain : cccr.local
@@ -64,8 +78,8 @@
         <th>IP</th>
         <th>vcpu<br>(core)</th>
         <th>Memory<br>(GB)</th>
-        <th>OS</th>
-        <th>contaimer<br>Runtime</th>
+        <th>OS (GB)</th>
+        <th>contaimer<br>Runtime (GB)</th>
     </tr>
 </thead>
 <tbody>
@@ -185,21 +199,11 @@
 </tbody>
 </table>
 
-**2. 노드별 역할**
+**4. 노드별 역할**
 
 - Bastion Node : Openshift 4 Container Platform 구축의 기반이 되는 노드로서, DNS/ HAProxy/ Image Registry/ Chrony/ Yum Repository 을 포함
 - Master Node : Openshift 4 Control Plane Node, 고가용성을 위해 반드시 3중화 이상으로 구성 
 - Router Node : Application이 배포될 서비스 노드로 라우팅하는 노드
 - Infra Node : Logging, Monitoring, CI/CD 구성을 위한 노드
 - Service Node : 실질적인 Application이 배포되는 Node
-
-**3. 논리적 Architecture**
-
-![logical](./images/logical.png)
-
-**4.. 물리적 Architecture**
-
-- 각 VM의 리소스 할당량을 고려하여 배치
-- Com #3의 경우 Bootstrap은 Master Node 설치 후 삭제가능하므로, 구축 완료 후 삭제하고 Infra #2, Router Node 배치 
-
-![physical](./images/physical.png)
+- Quay Node : OpenShift 컨테이너 이미지 레지스트리인 Quay와 이미지 보안 스캐닝을 위한 Clair 구성을 위한 노드
