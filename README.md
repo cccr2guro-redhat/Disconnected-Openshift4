@@ -49,7 +49,7 @@
 
 **1. 논리적 Architecture**
 
-<<<<<<<<<<<<<<<< 논리적 아키텍쳐 사진 >>>>>>>>>>>>>>>>>>>
+![논리 아키텍쳐](https://user-images.githubusercontent.com/67780144/97079200-e584f480-162c-11eb-86ea-915973f4d499.png)
 
 - QUAY는 페쇄망에서 구축할 수 있는 버전이 아직 나오지 않아 폐쇄망 외부에 구축하였음
 
@@ -58,8 +58,7 @@
 - 각 VM의 리소스 할당량을 고려하여 배치
 - Com #3의 경우 Bootstrap은 Master Node 설치 후 삭제가능하므로, 구축 완료 후 삭제하고 Infra #2, Router Node 배치
 
-<<<<<<<<<<<<<<<< 물리적 아키텍쳐 사진 >>>>>>>>>>>>>>>>>>>
-
+![물리 아키텍쳐 (1)](https://user-images.githubusercontent.com/67780144/97079199-e3bb3100-162c-11eb-93b8-393b42cd952a.png)
 **3. 노드별 Resource, IP 구성**
 
 - Cluster Name : redhat2
