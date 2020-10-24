@@ -49,9 +49,9 @@
 
 **1. 논리적 Architecture**
 
-![논리 아키텍쳐](https://user-images.githubusercontent.com/67780144/97079200-e584f480-162c-11eb-86ea-915973f4d499.png)
+- Quay 폐쇄망에서 구축할 수 있는 버전이 아직 나오지 않아 폐쇄망 외부에 구축하였음
 
-- QUAY는 페쇄망에서 구축할 수 있는 버전이 아직 나오지 않아 폐쇄망 외부에 구축하였음
+![논리 아키텍쳐](https://user-images.githubusercontent.com/67780144/97079200-e584f480-162c-11eb-86ea-915973f4d499.png)
 
 **2.. 물리적 Architecture**
 
