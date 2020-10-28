@@ -1,7 +1,6 @@
 # Disconnect Openshift Container Platform 구축 및 CI/CD Pipeline
-<br></br>
 ## OpenShift Conatiner Platform 4.4.17
-## Installing a cluster on bare metal in a disconnected network
+### Installing a cluster on bare metal in a disconnected network
 ## 프로젝트 목표
 
 **1. PaaS 클라우드 구축**
